@@ -1,4 +1,4 @@
-# RAG_API
+# RAG_CHATBOT_BACKEND
 
 Projeto backend em Django. 
 
