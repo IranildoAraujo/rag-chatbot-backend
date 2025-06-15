@@ -1,0 +1,23 @@
+version: '3.8'
+
+services:
+  # Serviço para o backend do chatbot RAG
+  rag-chatbot-backend:
+    build:
+      context: . 
+      dockerfile: Dockerfile
+    container_name: rag_chatbot_backend
+    ports:
+      - "8000:8000"
+    environment:
+      CHROMA_HOST: ${CHROMA_HOST}
+      CHROMA_PORT: ${CHROMA_PORT}
+    networks:
+      - chroma-docker_chroma-net # Conecta o backend à rede existente do ChromaDB
+    restart: unless-stopped
+    volumes:
+      - .:/app 
+
+networks:
+  chroma-docker_chroma-net:
+    external: true

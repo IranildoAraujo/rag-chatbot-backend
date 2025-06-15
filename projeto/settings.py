@@ -22,9 +22,17 @@ GOOGLE_API_KEY = os.getenv("GOOGLE_API_KEY")
 if not GOOGLE_API_KEY:
     print("AVISO: GOOGLE_API_KEY não encontrada no ambiente ou arquivo .env!")
 
+
+# CHROMA_DB Config (NOVO)
+CHROMA_HOST = os.getenv("CHROMA_HOST")
+CHROMA_PORT = int(os.getenv("CHROMA_PORT"))
+CHROMA_COLLECTION_NAME = os.getenv("CHROMA_COLLECTION_NAME")
+
+GEMINI_MODEL_NAME = os.getenv("GEMINI_MODEL_NAME")
+GEMINI_EMBEDDING_MODEL = os.getenv("GEMINI_EMBEDDING_MODEL")
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
-
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/5.2/howto/deployment/checklist/
@@ -147,15 +155,4 @@ REST_FRAMEWORK = {
         # Adicione o BrowsableAPIRenderer se quiser a interface web do DRF
         "rest_framework.renderers.BrowsableAPIRenderer",
     ],
-    # Você pode adicionar autenticação e permissões aqui se necessário
-    # 'DEFAULT_AUTHENTICATION_CLASSES': [],
-    # 'DEFAULT_PERMISSION_CLASSES': [],
 }
-
-# Configurações específicas do RAG (adicionadas aqui para centralização)
-# É melhor usar variáveis de ambiente para o API Key
-CHROMA_HOST = "localhost"
-CHROMA_PORT = 8900  # Porta especificada na pergunta
-CHROMA_COLLECTION_NAME = "my_rag_collection"
-GEMINI_MODEL_NAME = "gemini-1.5-flash"  # Ou 'gemini-pro', etc.
-GEMINI_EMBEDDING_MODEL = "models/text-embedding-004"  # Modelo de embedding recomendado

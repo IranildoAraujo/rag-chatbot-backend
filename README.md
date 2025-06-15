@@ -26,6 +26,11 @@ pip install -r requirements.txt
 
 ```
 GOOGLE_API_KEY=#############################
+GEMINI_MODEL_NAME=#############################
+GEMINI_EMBEDDING_MODEL=#############################
+CHROMA_HOST=#############################
+CHROMA_PORT=#############################
+CHROMA_COLLECTION_NAME=#############################
 ```
 
 ## Instalação do ChromaDB em docker:
