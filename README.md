@@ -22,7 +22,7 @@ source .venv/bin/activate
 pip install -r requirements.txt
 ```
 
-## No arquivo `.env` da API adicione sua API Key gerada no Gemini:
+## No arquivo `.env` da API adicione sua API Key gerada no Gemini, Modelos e configurações do banco vetorial chromadb:
 
 ```
 GOOGLE_API_KEY=#############################
