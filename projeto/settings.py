@@ -50,6 +50,7 @@ CORS_ALLOWED_ORIGINS = [
     "http://localhost:5173",
     # É uma boa ideia adicionar 127.0.0.1 também, pois às vezes é tratado diferente
     "http://127.0.0.1:5173",
+    
 ]
 
 # Application definition
